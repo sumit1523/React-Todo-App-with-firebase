@@ -38,11 +38,12 @@ const App = () => {
 				<Button disabled={!input} type='submit' onClick={addTodo} variant="contained" color="primary">Add ToDo</Button>
 			</form>
 			<ul>
-				{
+				{todos.length > 0 ?
 					todos.map(todo => (
 						<Todo todo={todo} />
-					)
-					)
+					))
+					:
+					<div>{'There is no Todo List. Please add Todos'}</div>
 				}
 			</ul>
 		</div>
